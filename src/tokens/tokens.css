@@ -1,0 +1,159 @@
+/* ==========================================================================
+   CARBONLY DESIGN SYSTEM TOKENS
+   Strict palette & semantic variables as mandated by the Master Brief.
+   Palette variables are strictly defined here; components consume semantic tokens.
+   ========================================================================== */
+
+:root {
+  /* Core Brand & Neutral Palette (Source of Truth) */
+  --color-deep-green: #16342B;
+  --color-forest-green: #2D6A4F;
+  --color-accent-green: #40916C;
+  --color-dark-blue: #1B3A57;
+  --color-white: #FFFFFF;
+  --color-light-neutral: #EEF2ED;
+  --color-light-blue-grey: #E9EEF3;
+
+  /* Extended Utility Swatches (Muted, Enterprise Tones) */
+  --color-slate-50: #F8FAFC;
+  --color-slate-100: #F1F5F9;
+  --color-slate-200: #E2E8F0;
+  --color-slate-300: #CBD5E1;
+  --color-slate-400: #94A3B8;
+  --color-slate-500: #64748B;
+  --color-slate-600: #475569;
+  --color-slate-700: #334155;
+  --color-slate-800: #1E293B;
+  --color-slate-900: #0F172A;
+
+  --color-amber-50: #FFFBEB;
+  --color-amber-100: #FEF3C7;
+  --color-amber-700: #B45309;
+  --color-amber-800: #92400E;
+
+  --color-red-50: #FEF2F2;
+  --color-red-100: #FEE2E2;
+  --color-red-600: #DC2626;
+  --color-red-700: #B91C1C;
+
+  /* Semantic Layout Backgrounds */
+  /* Restrained Green Rule: Backgrounds stay white/light neutral; app never feels green overall */
+  --bg-app: var(--color-light-neutral);
+  --bg-surface: var(--color-white);
+  --bg-surface-subtle: #F7FAF8;
+  --bg-elevated: var(--color-white);
+  --bg-muted: #E2EAE5;
+  --bg-card: var(--color-white);
+
+  /* Semantic Typography Colors (WCAG AA Compliant) */
+  --text-primary: #12211C;
+  --text-secondary: #3D4F48;
+  --text-muted: #6B7C75;
+  --text-on-dark: var(--color-white);
+  --text-inverse: var(--color-white);
+
+  /* Semantic Borders */
+  --border-subtle: #E2E8E4;
+  --border-medium: #CAD5CE;
+  --border-focus: var(--color-forest-green);
+
+  /* Primary Interactive / CTA Tokens */
+  --cta-primary-bg: var(--color-forest-green);
+  --cta-primary-text: var(--color-white);
+  --cta-primary-hover: var(--color-deep-green);
+  --cta-primary-active: #0F251E;
+
+  /* Status Pill Colors (Label + Dot, Accessible Contrast) */
+  --status-pending-text: #475569;
+  --status-pending-bg: #F1F5F9;
+  --status-pending-dot: #64748B;
+
+  --status-under-review-text: #92400E;
+  --status-under-review-bg: #FEF3C7;
+  --status-under-review-dot: #D97706;
+
+  --status-verified-text: #1E5E45;
+  --status-verified-bg: #E8F5EE;
+  --status-verified-dot: var(--color-forest-green);
+
+  --status-listed-text: #164E63;
+  --status-listed-bg: #E0F2FE;
+  --status-listed-dot: #0284C7;
+
+  --status-sold-text: #334155;
+  --status-sold-bg: #E2E8F0;
+  --status-sold-dot: #475569;
+
+  --status-retired-text: #14532D;
+  --status-retired-bg: #DCFCE7;
+  --status-retired-dot: #15803D;
+
+  --status-rejected-text: #991B1B;
+  --status-rejected-bg: #FEE2E2;
+  --status-rejected-dot: #DC2626;
+
+  --status-draft-text: #4B5563;
+  --status-draft-bg: #F3F4F6;
+  --status-draft-dot: #9CA3AF;
+
+  /* Typography Scale */
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-family-mono: 'SF Mono', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+
+  --font-page-heading: 700 1.875rem / 1.25 var(--font-family);    /* 30px */
+  --font-section-heading: 600 1.375rem / 1.3 var(--font-family);  /* 22px */
+  --font-card-heading: 600 1.125rem / 1.4 var(--font-family);     /* 18px */
+  --font-body: 400 0.9375rem / 1.5 var(--font-family);            /* 15px */
+  --font-body-medium: 500 0.9375rem / 1.5 var(--font-family);     /* 15px */
+  --font-muted: 400 0.8125rem / 1.45 var(--font-family);          /* 13px */
+  --font-small-bold: 600 0.8125rem / 1.4 var(--font-family);      /* 13px */
+  --font-numeric-lg: 700 2rem / 1.15 var(--font-family);          /* 32px Bold Numeric */
+  --font-numeric-md: 700 1.5rem / 1.2 var(--font-family);         /* 24px Bold Numeric */
+
+  /* Spacing Scale (4px base) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+
+  /* Radii */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-full: 9999px;
+
+  /* Shadows (Fintech / Groww-inspired restrained shadows) */
+  --shadow-xs: 0 1px 2px rgba(18, 38, 30, 0.04);
+  --shadow-sm: 0 1px 3px rgba(18, 38, 30, 0.06), 0 1px 2px rgba(18, 38, 30, 0.04);
+  --shadow-md: 0 4px 14px rgba(18, 38, 30, 0.07);
+  --shadow-lg: 0 10px 28px rgba(18, 38, 30, 0.09);
+  --shadow-modal: 0 20px 40px rgba(18, 38, 30, 0.16);
+
+  /* Accessibility & Focus */
+  --focus-ring: 0 0 0 3px rgba(45, 106, 79, 0.28);
+  --focus-ring-offset: 2px;
+  --focus-outline: 2px solid var(--color-forest-green);
+
+  /* Motion & Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 220ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 320ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Reduced Motion Override for Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

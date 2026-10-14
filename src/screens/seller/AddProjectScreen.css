@@ -1,0 +1,132 @@
+.add-project-page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding-bottom: 80px;
+}
+
+.add-project-header {
+  margin-bottom: var(--space-6);
+}
+
+.add-project-title {
+  font: var(--font-page-heading);
+  color: var(--text-primary);
+  margin-bottom: var(--space-1);
+}
+
+.add-project-subtitle {
+  font: var(--font-body);
+  color: var(--text-muted);
+}
+
+.add-project-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.form-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-sm);
+}
+
+.form-card-title {
+  font: var(--font-card-heading);
+  color: var(--text-primary);
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-field.full-width {
+  grid-column: span 2;
+}
+
+.form-label {
+  font: var(--font-small-bold);
+  color: var(--text-secondary);
+  margin-bottom: var(--space-2);
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  padding: 10px 14px;
+  background: var(--color-slate-50);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  font: var(--font-body);
+  color: var(--text-primary);
+  outline: none;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-color: var(--color-forest-green);
+  box-shadow: var(--focus-ring);
+  background: var(--color-white);
+}
+
+.form-input.has-error {
+  border-color: var(--color-red-600);
+  background: #FFF5F5;
+}
+
+.field-err {
+  font-size: 0.72rem;
+  color: var(--color-red-600);
+  margin-top: 4px;
+}
+
+.prefix-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.prefix-symbol {
+  position: absolute;
+  left: 14px;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.form-input.has-prefix {
+  padding-left: 28px;
+}
+
+.form-actions-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  padding: var(--space-4) var(--space-6);
+  box-shadow: var(--shadow-sm);
+}
+
+@media (max-width: 640px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  .form-field.full-width {
+    grid-column: span 1;
+  }
+}

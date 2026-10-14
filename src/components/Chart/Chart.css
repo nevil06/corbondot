@@ -1,0 +1,205 @@
+.carbonly-chart {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.chart-title {
+  font: var(--font-small-bold);
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-3);
+}
+
+.chart-empty {
+  padding: var(--space-6);
+  text-align: center;
+  font: var(--font-muted);
+  color: var(--text-muted);
+  background: var(--bg-surface-subtle);
+  border-radius: var(--radius-md);
+}
+
+.chart-svg-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.chart-svg {
+  width: 100%;
+  height: calc(100% - 24px);
+  overflow: visible;
+}
+
+.chart-grid-line {
+  stroke: var(--border-subtle);
+  stroke-width: 1;
+  stroke-dasharray: 4 4;
+}
+
+.chart-axis-line {
+  stroke: var(--border-medium);
+  stroke-width: 1;
+}
+
+.chart-point {
+  fill: var(--color-white);
+  stroke: var(--color-forest-green);
+  stroke-width: 2.5;
+  transition: r var(--transition-fast), fill var(--transition-fast);
+  cursor: pointer;
+}
+
+.chart-point:hover {
+  r: 6.5;
+  fill: var(--color-forest-green);
+}
+
+.chart-x-labels {
+  display: flex;
+  justify-content: space-between;
+  padding-top: var(--space-2);
+}
+
+.chart-x-label {
+  font: var(--font-muted);
+  color: var(--text-muted);
+  font-size: 0.75rem;
+}
+
+/* Bar Chart */
+.bar-chart-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-2);
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.bar-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.bar-track {
+  width: 100%;
+  max-width: 32px;
+  height: calc(100% - 20px);
+  display: flex;
+  align-items: flex-end;
+  background: var(--color-light-neutral);
+  border-radius: var(--radius-xs) var(--radius-xs) 0 0;
+  overflow: hidden;
+}
+
+.bar-fill {
+  width: 100%;
+  background: var(--color-forest-green);
+  border-radius: var(--radius-xs) var(--radius-xs) 0 0;
+  transition: height var(--transition-normal);
+}
+
+.bar-fill:hover {
+  background: var(--color-deep-green);
+}
+
+.bar-label {
+  font: var(--font-muted);
+  color: var(--text-muted);
+  font-size: 0.7rem;
+  margin-top: var(--space-1);
+}
+
+/* Donut Chart */
+.donut-wrapper {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  margin: 0 auto var(--space-4);
+}
+
+.donut-svg {
+  transform: rotate(-90deg);
+  width: 100%;
+  height: 100%;
+}
+
+.donut-ring-bg {
+  fill: transparent;
+  stroke: var(--color-light-neutral);
+  stroke-width: 4;
+}
+
+.donut-segment {
+  transition: stroke-dasharray var(--transition-normal);
+}
+
+.donut-center-info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  pointer-events: none;
+}
+
+.donut-center-value {
+  font: var(--font-card-heading);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.donut-center-label {
+  font: var(--font-muted);
+  color: var(--text-muted);
+  font-size: 0.75rem;
+}
+
+.donut-legend {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.donut-legend-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font: var(--font-muted);
+}
+
+.donut-legend-color {
+  width: 10px;
+  height: 10px;
+  border-radius: var(--radius-xs);
+  margin-right: var(--space-2);
+}
+
+.donut-legend-text {
+  flex: 1;
+  color: var(--text-secondary);
+}
+
+.donut-legend-value {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

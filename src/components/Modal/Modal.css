@@ -1,0 +1,118 @@
+.carbon-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(18, 38, 30, 0.6);
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  z-index: 999;
+  animation: carbon-fade-in 160ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.carbon-modal {
+  background-color: var(--bg-surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-modal);
+  width: 100%;
+  max-height: calc(100vh - 48px);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  outline: none;
+  animation: carbon-scale-up 200ms cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid var(--border-subtle);
+}
+
+.carbon-modal--sm {
+  max-width: 440px;
+}
+
+.carbon-modal--md {
+  max-width: 580px;
+}
+
+.carbon-modal--lg {
+  max-width: 780px;
+}
+
+.carbon-modal__header {
+  padding: 20px 24px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  border-bottom: 1px solid var(--border-subtle);
+  background-color: var(--bg-surface-subtle);
+}
+
+.carbon-modal__title {
+  margin: 0;
+  font-family: var(--font-family);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.3;
+}
+
+.carbon-modal__desc {
+  margin: 4px 0 0 0;
+  font-family: var(--font-family);
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.carbon-modal__close-btn {
+  background: transparent;
+  border: none;
+  font-size: 1rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.carbon-modal__close-btn:hover {
+  background-color: var(--bg-muted);
+  color: var(--text-primary);
+}
+
+.carbon-modal__close-btn:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+.carbon-modal__body {
+  padding: 24px;
+  overflow-y: auto;
+  font-family: var(--font-family);
+  color: var(--text-secondary);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
+.carbon-modal__footer {
+  padding: 16px 24px;
+  border-top: 1px solid var(--border-subtle);
+  background-color: var(--bg-surface-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+@keyframes carbon-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes carbon-scale-up {
+  from { opacity: 0; transform: scale(0.96) translateY(8px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}

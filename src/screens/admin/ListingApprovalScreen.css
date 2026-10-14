@@ -1,0 +1,154 @@
+.listing-approval-page {
+  padding-bottom: 80px;
+}
+
+.listing-approval-header {
+  margin-bottom: var(--space-6);
+}
+
+.approval-title {
+  font: var(--font-page-heading);
+  color: var(--text-primary);
+  margin-bottom: var(--space-1);
+}
+
+.approval-subtitle {
+  font: var(--font-body);
+  color: var(--text-muted);
+}
+
+.listing-cards-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.approval-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+}
+
+.approval-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.approval-id {
+  font-family: var(--font-family-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.approval-project-name {
+  font: var(--font-section-heading);
+  color: var(--text-primary);
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.approval-meta {
+  font: var(--font-muted);
+  color: var(--text-muted);
+}
+
+.approval-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--space-3);
+  background: var(--color-slate-50);
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-5);
+}
+
+.metric-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.metric-item .lbl {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.metric-item .val {
+  font: var(--font-small-bold);
+  color: var(--text-primary);
+}
+
+.metric-item .val.green {
+  color: var(--color-forest-green);
+}
+
+/* Checklist */
+.checklist-container {
+  margin-bottom: var(--space-5);
+}
+
+.checklist-title {
+  font: var(--font-card-heading);
+  color: var(--text-primary);
+  margin-bottom: var(--space-3);
+}
+
+.checklist-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.checklist-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  background: var(--color-light-neutral);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  user-select: none;
+  transition: all var(--transition-fast);
+  font: var(--font-body);
+  color: var(--text-secondary);
+}
+
+.checklist-item:hover {
+  background: #E8F5EE;
+}
+
+.checklist-item.checked {
+  background: #E8F5EE;
+  border-color: var(--color-forest-green);
+  color: var(--color-deep-green);
+}
+
+.check-icon {
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.check-icon.green {
+  color: var(--color-forest-green);
+}
+
+.approval-card-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-3);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--border-subtle);
+  margin-top: auto;
+}

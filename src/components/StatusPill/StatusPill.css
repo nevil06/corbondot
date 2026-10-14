@@ -1,0 +1,139 @@
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-family);
+  font-weight: 500;
+  white-space: nowrap;
+  letter-spacing: 0.01em;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.status-pill--md {
+  padding: 3px 10px;
+  font-size: 0.8125rem; /* 13px */
+  line-height: 1.25;
+}
+
+.status-pill--sm {
+  padding: 2px 7px;
+  font-size: 0.75rem; /* 12px */
+  line-height: 1.2;
+  gap: 4px;
+}
+
+.status-pill__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.status-pill--sm .status-pill__dot {
+  width: 5px;
+  height: 5px;
+}
+
+/* 8 Standard Status States */
+
+/* 1. Pending */
+.status-pill--pending {
+  background-color: var(--status-pending-bg);
+  color: var(--status-pending-text);
+  border: 1px solid rgba(100, 116, 139, 0.18);
+}
+.status-pill--pending .status-pill__dot {
+  background-color: var(--status-pending-dot);
+}
+
+/* 2. Under Review */
+.status-pill--under-review {
+  background-color: var(--status-under-review-bg);
+  color: var(--status-under-review-text);
+  border: 1px solid rgba(217, 119, 6, 0.22);
+}
+.status-pill--under-review .status-pill__dot {
+  background-color: var(--status-under-review-dot);
+}
+
+/* 3. Verified */
+.status-pill--verified {
+  background-color: var(--status-verified-bg);
+  color: var(--status-verified-text);
+  border: 1px solid rgba(45, 106, 79, 0.22);
+}
+.status-pill--verified .status-pill__dot {
+  background-color: var(--status-verified-dot);
+}
+
+/* 4. Listed */
+.status-pill--listed {
+  background-color: var(--status-listed-bg);
+  color: var(--status-listed-text);
+  border: 1px solid rgba(2, 132, 199, 0.22);
+}
+.status-pill--listed .status-pill__dot {
+  background-color: var(--status-listed-dot);
+}
+
+/* 5. Sold */
+.status-pill--sold {
+  background-color: var(--status-sold-bg);
+  color: var(--status-sold-text);
+  border: 1px solid rgba(71, 85, 105, 0.2);
+}
+.status-pill--sold .status-pill__dot {
+  background-color: var(--status-sold-dot);
+}
+
+/* 6. Retired */
+.status-pill--retired {
+  background-color: var(--status-retired-bg);
+  color: var(--status-retired-text);
+  border: 1px solid rgba(21, 128, 61, 0.24);
+}
+.status-pill--retired .status-pill__dot {
+  background-color: var(--status-retired-dot);
+}
+
+/* 7. Rejected */
+.status-pill--rejected {
+  background-color: var(--status-rejected-bg);
+  color: var(--status-rejected-text);
+  border: 1px solid rgba(220, 38, 38, 0.2);
+}
+.status-pill--rejected .status-pill__dot {
+  background-color: var(--status-rejected-dot);
+}
+
+/* 8. Draft */
+.status-pill--draft {
+  background-color: var(--status-draft-bg);
+  color: var(--status-draft-text);
+  border: 1px solid rgba(156, 163, 175, 0.25);
+}
+.status-pill--draft .status-pill__dot {
+  background-color: var(--status-draft-dot);
+}
+
+/* 9. Responded */
+.status-pill--responded {
+  background-color: #E0F2FE;
+  color: #0369A1;
+  border: 1px solid rgba(2, 132, 199, 0.22);
+}
+.status-pill--responded .status-pill__dot {
+  background-color: #0284C7;
+}
+
+/* 10. Accepted */
+.status-pill--accepted {
+  background-color: #E8F5EE;
+  color: #14532D;
+  border: 1px solid rgba(45, 106, 79, 0.22);
+}
+.status-pill--accepted .status-pill__dot {
+  background-color: var(--color-forest-green);
+}
+

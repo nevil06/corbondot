@@ -1,0 +1,143 @@
+.carbon-stepper {
+  width: 100%;
+}
+
+.carbon-stepper__list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.carbon-stepper--horizontal .carbon-stepper__list {
+  justify-content: space-between;
+}
+
+.carbon-stepper__item {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  position: relative;
+}
+
+.carbon-stepper__item:last-child {
+  flex: 0 0 auto;
+}
+
+.carbon-stepper__button-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: default;
+  outline: none;
+  border-radius: var(--radius-sm);
+  padding: 4px;
+}
+
+.carbon-stepper__button-wrapper--clickable {
+  cursor: pointer;
+}
+.carbon-stepper__button-wrapper--clickable:hover .carbon-stepper__label {
+  color: var(--color-forest-green);
+}
+.carbon-stepper__button-wrapper--clickable:focus-visible {
+  box-shadow: var(--focus-ring);
+}
+
+.carbon-stepper__indicator {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  flex-shrink: 0;
+  transition: background-color var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
+}
+
+/* States */
+.carbon-stepper__item--upcoming .carbon-stepper__indicator {
+  background-color: var(--color-slate-100);
+  color: var(--text-muted);
+  border: 1px solid var(--border-medium);
+}
+.carbon-stepper__item--upcoming .carbon-stepper__label {
+  color: var(--text-muted);
+}
+
+.carbon-stepper__item--current .carbon-stepper__indicator {
+  background-color: var(--color-forest-green);
+  color: var(--color-white);
+  border: 1px solid var(--color-forest-green);
+  box-shadow: 0 0 0 3px rgba(45, 106, 79, 0.2);
+}
+.carbon-stepper__item--current .carbon-stepper__label {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.carbon-stepper__item--completed .carbon-stepper__indicator {
+  background-color: var(--status-verified-bg);
+  color: var(--color-forest-green);
+  border: 1px solid var(--color-forest-green);
+}
+.carbon-stepper__item--completed .carbon-stepper__label {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.carbon-stepper__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.carbon-stepper__label {
+  font-family: var(--font-family);
+  font-size: 0.875rem;
+  white-space: nowrap;
+}
+
+.carbon-stepper__desc {
+  font-family: var(--font-family);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.carbon-stepper__connector {
+  flex: 1;
+  height: 2px;
+  background-color: var(--border-subtle);
+  margin: 0 12px;
+  min-width: 16px;
+  transition: background-color var(--transition-fast);
+}
+
+.carbon-stepper__connector--completed {
+  background-color: var(--color-forest-green);
+}
+
+/* Vertical Variant */
+.carbon-stepper--vertical .carbon-stepper__list {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.carbon-stepper--vertical .carbon-stepper__item {
+  flex: none;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .carbon-stepper--horizontal .carbon-stepper__label {
+    display: none;
+  }
+  .carbon-stepper--horizontal .carbon-stepper__desc {
+    display: none;
+  }
+}

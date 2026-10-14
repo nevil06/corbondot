@@ -1,0 +1,218 @@
+.reports-page {
+  padding-bottom: 80px;
+}
+
+.reports-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--space-6);
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.reports-title {
+  font: var(--font-page-heading);
+  color: var(--text-primary);
+  margin-bottom: var(--space-1);
+}
+
+.reports-subtitle {
+  font: var(--font-body);
+  color: var(--text-muted);
+}
+
+.reports-controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.date-select-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.calendar-icon {
+  position: absolute;
+  left: 12px;
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+.date-select {
+  padding: 8px 14px 8px 36px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  font: var(--font-muted);
+  color: var(--text-primary);
+  outline: none;
+  cursor: pointer;
+}
+
+.date-select:focus {
+  border-color: var(--color-forest-green);
+  box-shadow: var(--focus-ring);
+}
+
+/* KPIs */
+.reports-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-5);
+  margin-bottom: var(--space-6);
+}
+
+.report-kpi-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  padding: var(--space-5);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+}
+
+.kpi-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.kpi-num {
+  font: var(--font-numeric-lg);
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.kpi-num--green {
+  color: var(--color-forest-green);
+}
+
+.kpi-unit {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.kpi-sub {
+  font: var(--font-muted);
+  color: var(--text-muted);
+}
+
+/* Charts Grid */
+.reports-charts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--space-5);
+  margin-bottom: var(--space-6);
+}
+
+.chart-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  padding: var(--space-5);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+}
+
+.chart-card__title {
+  font: var(--font-card-heading);
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+/* Table Card */
+.audit-table-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  padding: var(--space-5);
+  box-shadow: var(--shadow-sm);
+}
+
+.audit-table-header {
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.audit-title {
+  font: var(--font-card-heading);
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+
+.audit-subtitle {
+  font: var(--font-muted);
+  color: var(--text-muted);
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+.audit-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.audit-table th {
+  padding: var(--space-3) var(--space-4);
+  font: var(--font-small-bold);
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border-medium);
+  background: var(--color-slate-50);
+}
+
+.audit-table td {
+  padding: var(--space-3) var(--space-4);
+  font: var(--font-body);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.cert-link {
+  color: var(--color-forest-green);
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.font-mono {
+  font-family: var(--font-family-mono);
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.verified-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: #E8F5EE;
+  color: var(--color-forest-green);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+}

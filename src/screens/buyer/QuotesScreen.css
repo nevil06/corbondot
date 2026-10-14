@@ -1,0 +1,420 @@
+.quotes-page {
+  padding-bottom: 80px;
+}
+
+.quotes-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--space-6);
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.quotes-title {
+  font: var(--font-page-heading);
+  color: var(--text-primary);
+  margin-bottom: var(--space-1);
+}
+
+.quotes-subtitle {
+  font: var(--font-body);
+  color: var(--text-muted);
+}
+
+.quotes-header-actions {
+  display: flex;
+  gap: var(--space-2);
+}
+
+/* Tabs */
+.quotes-tabs {
+  display: flex;
+  gap: var(--space-2);
+  border-bottom: 1px solid var(--border-subtle);
+  margin-bottom: var(--space-6);
+  overflow-x: auto;
+}
+
+.quotes-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  font: var(--font-body-medium);
+  color: var(--text-muted);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all var(--transition-fast);
+}
+
+.quotes-tab-btn:hover {
+  color: var(--text-primary);
+}
+
+.quotes-tab-btn.active {
+  color: var(--color-forest-green);
+  border-bottom-color: var(--color-forest-green);
+  font-weight: 600;
+}
+
+.tab-badge {
+  font-size: 0.72rem;
+  padding: 2px 6px;
+  background: var(--color-slate-100);
+  border-radius: var(--radius-full);
+  color: var(--text-secondary);
+}
+
+.quotes-tab-btn.active .tab-badge {
+  background: #E8F5EE;
+  color: var(--color-forest-green);
+}
+
+/* Empty Card */
+.quotes-empty-card {
+  text-align: center;
+  padding: var(--space-12);
+  background: var(--bg-surface);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-subtle);
+}
+
+.empty-icon {
+  color: var(--text-muted);
+  margin-bottom: var(--space-3);
+}
+
+/* Split Layout */
+.quotes-split-layout {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: var(--space-6);
+  align-items: start;
+}
+
+/* Left List Panel */
+.quotes-list-panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.quote-item-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
+}
+
+.quote-item-card:hover {
+  border-color: var(--border-medium);
+  transform: translateY(-1px);
+}
+
+.quote-item-card.selected {
+  border-color: var(--color-forest-green);
+  box-shadow: 0 0 0 1px var(--color-forest-green), var(--shadow-sm);
+  background: #FAFCFA;
+}
+
+.quote-item-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-2);
+}
+
+.quote-id {
+  font-family: var(--font-family-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.quote-project-title {
+  font: var(--font-card-heading);
+  color: var(--text-primary);
+  margin-bottom: var(--space-2);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.quote-meta-line {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font: var(--font-muted);
+  color: var(--text-secondary);
+  margin-bottom: var(--space-3);
+}
+
+.meta-sep {
+  color: var(--border-medium);
+}
+
+.quote-footer-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  padding-top: var(--space-2);
+  border-top: 1px dashed var(--border-subtle);
+}
+
+.quote-chevron {
+  color: var(--text-muted);
+}
+
+/* Right Detail Panel */
+.quote-detail-panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.detail-top-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-sm);
+}
+
+.detail-top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--border-subtle);
+  margin-bottom: var(--space-5);
+}
+
+.detail-quote-id {
+  font-family: var(--font-family-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.detail-project-title {
+  font: var(--font-section-heading);
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.detail-developer-name {
+  font: var(--font-muted);
+  color: var(--text-muted);
+}
+
+.detail-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: var(--space-4);
+  margin-bottom: var(--space-5);
+}
+
+.metric-box {
+  background: var(--color-light-neutral);
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+}
+
+.metric-box-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+  margin-bottom: 2px;
+}
+
+.metric-box-val {
+  font: var(--font-numeric-md);
+  color: var(--text-primary);
+}
+
+.metric-box-val--green {
+  color: var(--color-forest-green);
+}
+
+.metric-box-sub {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.detail-notes-box {
+  background: var(--color-slate-50);
+  border-left: 3px solid var(--color-forest-green);
+  padding: var(--space-3) var(--space-4);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.notes-label {
+  font: var(--font-small-bold);
+  color: var(--text-secondary);
+  display: block;
+  margin-bottom: 2px;
+}
+
+.notes-text {
+  font: var(--font-muted);
+  color: var(--text-muted);
+  margin: 0;
+  font-style: italic;
+}
+
+/* Seller Counter Offer Card */
+.seller-offer-card {
+  background: #F4FAF6;
+  border: 1.5px solid var(--color-accent-green);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-sm);
+}
+
+.offer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-3);
+}
+
+.offer-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font: var(--font-small-bold);
+  color: var(--color-deep-green);
+}
+
+.offer-date {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.offer-message {
+  font: var(--font-body);
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: var(--space-4);
+}
+
+.offer-terms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: var(--space-3);
+  background: var(--color-white);
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  margin-bottom: var(--space-5);
+}
+
+.term-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.term-label {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.term-val {
+  font: var(--font-card-heading);
+  color: var(--text-primary);
+}
+
+.term-val.green {
+  color: var(--color-forest-green);
+}
+
+.offer-action-buttons {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+/* Status Banners */
+.accepted-banner-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  background: #E8F5EE;
+  border: 1px solid var(--color-forest-green);
+  border-radius: var(--radius-xl);
+  padding: var(--space-5);
+}
+
+.accepted-icon {
+  color: var(--color-forest-green);
+  flex-shrink: 0;
+}
+
+.accepted-info h4 {
+  font: var(--font-card-heading);
+  color: var(--color-deep-green);
+  margin-bottom: 4px;
+}
+
+.accepted-info p {
+  font: var(--font-muted);
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.pending-banner-card,
+.rejected-banner-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-surface);
+}
+
+.pending-icon {
+  color: #D97706;
+  flex-shrink: 0;
+}
+
+.rejected-icon {
+  color: var(--color-red-600);
+  flex-shrink: 0;
+}
+
+.pending-banner-card h4,
+.rejected-banner-card h4 {
+  font: var(--font-card-heading);
+  margin-bottom: 2px;
+}
+
+.pending-banner-card p,
+.rejected-banner-card p {
+  font: var(--font-muted);
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .quotes-split-layout {
+    grid-template-columns: 1fr;
+  }
+}

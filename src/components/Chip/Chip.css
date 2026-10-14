@@ -1,0 +1,84 @@
+.carbon-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 32px;
+  padding: 0 12px;
+  border-radius: var(--radius-full);
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-medium);
+  font-family: var(--font-family);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  cursor: pointer;
+  outline: none;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+  user-select: none;
+}
+
+.carbon-chip:hover {
+  border-color: var(--color-forest-green);
+  color: var(--text-primary);
+  background-color: var(--bg-surface-subtle);
+}
+
+.carbon-chip:focus-visible {
+  box-shadow: var(--focus-ring);
+  border-color: var(--color-forest-green);
+}
+
+/* Selected State */
+.carbon-chip--selected {
+  background-color: var(--status-verified-bg);
+  border-color: var(--color-forest-green);
+  color: var(--color-forest-green);
+  font-weight: 600;
+}
+.carbon-chip--selected:hover {
+  background-color: #DEF0E7;
+  border-color: var(--color-deep-green);
+  color: var(--color-deep-green);
+}
+
+.carbon-chip__icon {
+  display: inline-flex;
+  align-items: center;
+}
+
+.carbon-chip__label {
+  line-height: 1;
+}
+
+.carbon-chip__count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 6px;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  background-color: rgba(0, 0, 0, 0.06);
+  color: inherit;
+  font-variant-numeric: tabular-nums;
+}
+
+.carbon-chip--selected .carbon-chip__count {
+  background-color: rgba(45, 106, 79, 0.15);
+}
+
+.carbon-chip__remove {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  font-size: 0.6875rem;
+  margin-left: 2px;
+  transition: background-color var(--transition-fast);
+}
+
+.carbon-chip__remove:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}

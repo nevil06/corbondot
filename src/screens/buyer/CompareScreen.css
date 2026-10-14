@@ -1,0 +1,227 @@
+.compare-page {
+  padding-bottom: 80px;
+}
+
+.compare-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--space-6);
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.compare-title {
+  font: var(--font-page-heading);
+  color: var(--text-primary);
+  margin-bottom: var(--space-1);
+}
+
+.compare-subtitle {
+  font: var(--font-body);
+  color: var(--text-muted);
+}
+
+.compare-header-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+/* Empty State */
+.compare-empty-state {
+  text-align: center;
+  padding: var(--space-12) var(--space-6);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty-icon {
+  color: var(--text-muted);
+  margin-bottom: var(--space-4);
+}
+
+.empty-title {
+  font: var(--font-section-heading);
+  color: var(--text-primary);
+  margin-bottom: var(--space-2);
+}
+
+.empty-description {
+  font: var(--font-body);
+  color: var(--text-muted);
+  max-width: 440px;
+  margin-bottom: var(--space-6);
+}
+
+/* Table Wrapper */
+.compare-table-wrapper {
+  overflow-x: auto;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+  -webkit-overflow-scrolling: touch;
+}
+
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 780px;
+}
+
+.compare-metric-col {
+  width: 240px;
+  background: var(--color-slate-50);
+  border-right: 1px solid var(--border-subtle);
+  padding: var(--space-5);
+  text-align: left;
+  font: var(--font-small-bold);
+  color: var(--text-secondary);
+  position: sticky;
+  left: 0;
+  z-index: 2;
+}
+
+.compare-project-col {
+  min-width: 260px;
+  max-width: 320px;
+  padding: var(--space-5);
+  border-right: 1px solid var(--border-subtle);
+  text-align: left;
+  vertical-align: top;
+  background: var(--bg-surface);
+}
+
+.compare-col-header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.remove-compare-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 4px;
+  border-radius: var(--radius-xs);
+  transition: all var(--transition-fast);
+}
+
+.remove-compare-btn:hover {
+  background: var(--color-red-50);
+  color: var(--color-red-600);
+}
+
+.compare-col-tag {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--color-forest-green);
+  margin-bottom: var(--space-1);
+}
+
+.compare-col-title {
+  font: var(--font-card-heading);
+  color: var(--text-primary);
+  margin-bottom: var(--space-2);
+  line-height: 1.35;
+  height: 2.7em;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.compare-col-price {
+  font: var(--font-numeric-md);
+  color: var(--color-forest-green);
+  margin-bottom: var(--space-3);
+}
+
+.compare-unit {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+.compare-quote-btn {
+  width: 100%;
+}
+
+/* Rows */
+.compare-table tbody tr {
+  border-top: 1px solid var(--border-subtle);
+}
+
+.compare-table tbody tr:hover {
+  background: var(--color-slate-50);
+}
+
+.row-header {
+  padding: var(--space-3) var(--space-5);
+  font: var(--font-small-bold);
+  color: var(--text-secondary);
+  background: var(--color-slate-50);
+  border-right: 1px solid var(--border-subtle);
+  position: sticky;
+  left: 0;
+  z-index: 1;
+}
+
+.compare-table td {
+  padding: var(--space-3) var(--space-5);
+  font: var(--font-body);
+  color: var(--text-primary);
+  border-right: 1px solid var(--border-subtle);
+  vertical-align: middle;
+}
+
+.tag-val {
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.numeric-td {
+  font-weight: 600;
+}
+
+.methodology-td {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+}
+
+.methodology-icon {
+  color: var(--color-forest-green);
+  flex-shrink: 0;
+}
+
+.positive-td {
+  font-weight: 600;
+  color: var(--color-forest-green);
+}
+
+.sdg-mini-row {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.sdg-mini-chip {
+  font-size: 0.7rem;
+  font-weight: 600;
+  background: var(--color-light-neutral);
+  padding: 2px 6px;
+  border-radius: var(--radius-xs);
+  color: var(--color-deep-green);
+}

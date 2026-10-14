@@ -1,0 +1,122 @@
+.carbon-card {
+  background-color: var(--bg-surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-subtle);
+  transition: box-shadow var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
+  position: relative;
+  overflow: hidden;
+}
+
+.carbon-card--default {
+  box-shadow: var(--shadow-sm);
+}
+
+.carbon-card--bordered {
+  border-color: var(--border-medium);
+  box-shadow: none;
+}
+
+.carbon-card--elevated {
+  box-shadow: var(--shadow-md);
+  border-color: transparent;
+}
+
+.carbon-card--interactive {
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+}
+.carbon-card--interactive:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--border-medium);
+  transform: translateY(-2px);
+}
+.carbon-card--interactive:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+  border-color: var(--color-forest-green);
+}
+
+.carbon-card--selected {
+  border-color: var(--color-forest-green);
+  box-shadow: 0 0 0 2px var(--color-forest-green), var(--shadow-sm);
+}
+
+/* Paddings */
+.carbon-card--pad-none {
+  padding: 0;
+}
+.carbon-card--pad-sm {
+  padding: 16px;
+}
+.carbon-card--pad-md {
+  padding: 24px;
+}
+.carbon-card--pad-lg {
+  padding: 32px;
+}
+
+/* StatCard Styles */
+.carbon-stat-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.carbon-stat-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.carbon-stat-card__label {
+  font-family: var(--font-family);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.carbon-stat-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+}
+
+.carbon-stat-card__value {
+  font-family: var(--font-family);
+  font-size: 1.875rem; /* Large Numeric 30px */
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+}
+
+.carbon-stat-card__footer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8125rem;
+  margin-top: 4px;
+}
+
+.carbon-stat-card__trend {
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.carbon-stat-card__trend--positive {
+  color: var(--color-forest-green);
+}
+
+.carbon-stat-card__trend--neutral {
+  color: var(--text-muted);
+}
+
+.carbon-stat-card__subvalue {
+  color: var(--text-muted);
+}

@@ -1,0 +1,312 @@
+.ds-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+}
+
+.ds-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--border-medium);
+  margin-bottom: 40px;
+}
+
+.ds-badge {
+  display: inline-block;
+  font-family: var(--font-family);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--color-forest-green);
+  background-color: var(--status-verified-bg);
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 12px;
+  border: 1px solid rgba(45, 106, 79, 0.2);
+}
+
+.ds-title {
+  margin: 0 0 12px 0;
+  font-family: var(--font-family);
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--color-deep-green);
+  line-height: 1.2;
+}
+
+.ds-desc {
+  margin: 0;
+  font-family: var(--font-family);
+  font-size: 1rem;
+  color: var(--text-secondary);
+  max-width: 680px;
+  line-height: 1.5;
+}
+
+.ds-header-actions {
+  display: flex;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.ds-section {
+  margin-bottom: 48px;
+}
+
+.ds-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 20px;
+  gap: 16px;
+}
+
+.ds-section-title {
+  margin: 0 0 6px 0;
+  font-family: var(--font-family);
+  font-size: 1.375rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.ds-section-desc {
+  margin: 0 0 20px 0;
+  font-family: var(--font-family);
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+/* Palette Grid */
+.ds-palette-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 16px;
+}
+
+.ds-swatch {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-xs);
+}
+
+.ds-swatch-box {
+  height: 72px;
+  width: 100%;
+}
+
+.ds-swatch-info {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ds-swatch-name {
+  font-family: var(--font-family);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.ds-swatch-code {
+  font-family: var(--font-family-mono);
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.ds-swatch-var {
+  font-family: var(--font-family-mono);
+  font-size: 0.6875rem;
+  color: var(--text-muted);
+}
+
+/* Status Pills */
+.ds-pills-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+}
+
+.ds-pill-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 12px;
+  background: var(--bg-surface-subtle);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  min-width: 120px;
+}
+
+.ds-pill-desc {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.ds-pills-row--sm {
+  margin-top: 12px;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 24px;
+}
+
+.ds-pill-size-label {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+/* Buttons */
+.ds-buttons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.ds-button-group {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ds-group-label {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.ds-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+/* Form Inputs */
+.ds-inputs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.ds-textarea-wrap {
+  margin-top: 20px;
+}
+
+.ds-input-badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  background-color: var(--bg-muted);
+  padding: 2px 8px;
+  border-radius: var(--radius-xs);
+}
+
+/* Stats */
+.ds-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.ds-card-variants {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.ds-card-heading {
+  margin: 0 0 8px 0;
+  font-size: 1.0625rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.ds-card-body {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.45;
+}
+
+/* Stepper */
+.ds-stepper-controls {
+  display: flex;
+  gap: 8px;
+}
+
+/* Chips */
+.ds-chips-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Table Demo */
+.ds-table-state-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.ds-table-title {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.ds-table-sub {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.ds-table-price {
+  font-weight: 600;
+  color: var(--color-forest-green);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Modal Content */
+.ds-modal-sample {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ds-modal-summary {
+  background-color: var(--bg-surface-subtle);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.875rem;
+}
+
+@media (max-width: 768px) {
+  .ds-header {
+    flex-direction: column;
+  }
+  .ds-section-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
