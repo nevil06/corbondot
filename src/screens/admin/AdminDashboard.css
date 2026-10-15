@@ -20,7 +20,7 @@
 
 .admin-dashboard-title {
   font: var(--font-page-heading);
-  color: var(--color-dark-blue);
+  color: var(--text-primary);
 }
 
 .admin-dashboard-subtitle {
@@ -50,9 +50,16 @@
 .admin-chart-card {
   background: var(--bg-surface);
   border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-xl);
+  border-radius: var(--radius-lg);
   padding: var(--space-5);
   box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal);
+}
+
+.admin-chart-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--border-medium);
 }
 
 .admin-card-title {
@@ -76,9 +83,16 @@
 .admin-panel-card {
   background: var(--bg-surface);
   border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-xl);
+  border-radius: var(--radius-lg);
   padding: var(--space-5);
   box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal);
+}
+
+.admin-panel-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--border-medium);
 }
 
 .panel-card-header {
@@ -111,10 +125,16 @@
   justify-content: space-between;
   align-items: center;
   padding: var(--space-3) var(--space-4);
-  background: var(--color-slate-50);
+  background: var(--bg-surface-subtle);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-md);
   gap: var(--space-3);
+  transition: transform var(--transition-fast), background var(--transition-fast);
+}
+
+.queue-item:hover {
+  transform: translateX(2px);
+  background: var(--bg-muted);
 }
 
 .queue-id {
@@ -148,18 +168,18 @@
 }
 
 .risk-low {
-  background: #E8F5EE;
-  color: #14532D;
+  background: var(--status-verified-bg);
+  color: var(--status-verified-text);
 }
 
 .risk-medium {
-  background: #FEF3C7;
-  color: #92400E;
+  background: var(--status-under-review-bg);
+  color: var(--status-under-review-text);
 }
 
 .risk-high {
-  background: #FEE2E2;
-  color: #991B1B;
+  background: var(--status-rejected-bg);
+  color: var(--status-rejected-text);
 }
 
 @media (max-width: 640px) {

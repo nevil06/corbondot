@@ -1,4 +1,4 @@
-/* Application Base & Layout */
+/* Application Base & Layout - Groww Inspired */
 
 * {
   box-sizing: border-box;
@@ -15,6 +15,7 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background-color var(--transition-normal), color var(--transition-normal);
 }
 
 #root {
@@ -28,23 +29,30 @@ body {
   display: flex;
   flex-direction: column;
   background-color: var(--bg-app);
+  transition: background-color var(--transition-normal);
 }
 
+/* Page Container with Clean Side Margins & Gaps */
 .carbon-main {
   flex: 1;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 24px 32px 64px;
 }
 
 .carbon-footer {
   background-color: var(--bg-surface);
   border-top: 1px solid var(--border-subtle);
-  padding: 20px 24px;
+  padding: 24px 32px;
   font-family: var(--font-family);
   font-size: 0.8125rem;
   color: var(--text-muted);
+  transition: background-color var(--transition-normal), border-color var(--transition-normal);
 }
 
 .carbon-footer__container {
-  max-width: 1360px;
+  max-width: 1280px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -54,8 +62,12 @@ body {
 }
 
 .carbon-footer__brand {
-  font-weight: 600;
-  color: var(--color-deep-green);
+  font-weight: 700;
+  color: var(--color-forest-green);
+}
+
+[data-theme="dark"] .carbon-footer__brand {
+  color: #4ADE80;
 }
 
 .carbon-footer__tagline {
@@ -65,11 +77,12 @@ body {
 
 .carbon-footer__badge {
   display: inline-block;
-  padding: 2px 8px;
+  padding: 4px 10px;
   background-color: var(--bg-surface-subtle);
   border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-xs);
+  border-radius: var(--radius-sm);
   font-size: 0.75rem;
+  font-weight: 500;
   color: var(--text-secondary);
 }
 
@@ -90,4 +103,14 @@ body {
 
 .carbon-skip-link:focus {
   top: 16px;
+}
+
+@media (max-width: 768px) {
+  .carbon-main {
+    padding: 16px 16px 48px;
+  }
+
+  .carbon-footer {
+    padding: 20px 16px;
+  }
 }

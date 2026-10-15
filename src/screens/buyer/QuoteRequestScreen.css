@@ -51,6 +51,7 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-5);
+  transition: box-shadow var(--transition-normal);
 }
 
 .rfp-project-summary {
@@ -116,7 +117,7 @@
 .rfp-textarea {
   width: 100%;
   padding: 10px 14px;
-  background: var(--color-slate-50);
+  background: var(--bg-surface-subtle);
   border: 1px solid var(--border-medium);
   border-radius: var(--radius-md);
   font: var(--font-body);
@@ -134,12 +135,12 @@
 .rfp-textarea:focus {
   border-color: var(--color-forest-green);
   box-shadow: var(--focus-ring);
-  background: var(--color-white);
+  background: var(--bg-surface);
 }
 
 .rfp-input.has-error {
   border-color: var(--color-red-600);
-  background: #FFF5F5;
+  background: var(--status-rejected-bg);
 }
 
 .rfp-error {
@@ -168,12 +169,13 @@
 
 /* Summary Panel */
 .summary-card {
-  background: var(--color-light-neutral);
+  background: var(--bg-surface);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-xl);
   padding: var(--space-6);
   position: sticky;
   top: 80px;
+  box-shadow: var(--shadow-sm);
 }
 
 .summary-title {
@@ -231,7 +233,7 @@
 .summary-guarantee {
   display: flex;
   gap: var(--space-3);
-  background: var(--bg-surface);
+  background: var(--bg-surface-subtle);
   padding: var(--space-4);
   border-radius: var(--radius-md);
   border: 1px solid var(--border-subtle);

@@ -6,6 +6,7 @@
   background-color: var(--bg-surface);
   box-shadow: var(--shadow-sm);
   -webkit-overflow-scrolling: touch;
+  transition: background-color var(--transition-normal), border-color var(--transition-normal);
 }
 
 .carbon-table {
@@ -71,11 +72,11 @@
   cursor: pointer;
 }
 .carbon-table__body-row--clickable:hover {
-  background-color: #F8FAF8;
+  background-color: var(--bg-surface-subtle);
 }
 .carbon-table__body-row--clickable:focus-visible {
   outline: none;
-  background-color: #F1F6F3;
+  background-color: var(--bg-muted);
 }
 
 /* Skeleton Loading State */
@@ -85,7 +86,7 @@
 
 .carbon-table__skeleton-cell {
   height: 16px;
-  background: linear-gradient(90deg, #EDF2EE 25%, #E2EAE5 50%, #EDF2EE 75%);
+  background: linear-gradient(90deg, var(--bg-surface-subtle) 25%, var(--bg-muted) 50%, var(--bg-surface-subtle) 75%);
   background-size: 200% 100%;
   border-radius: var(--radius-xs);
   animation: carbon-shimmer 1.5s infinite;

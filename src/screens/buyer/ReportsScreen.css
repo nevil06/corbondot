@@ -74,6 +74,12 @@
   box-shadow: var(--shadow-sm);
   display: flex;
   flex-direction: column;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.report-kpi-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
 }
 
 .kpi-label {
@@ -121,6 +127,12 @@
   box-shadow: var(--shadow-sm);
   display: flex;
   flex-direction: column;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.chart-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
 }
 
 .chart-card__title {
@@ -175,7 +187,7 @@
   font: var(--font-small-bold);
   color: var(--text-secondary);
   border-bottom: 1px solid var(--border-medium);
-  background: var(--color-slate-50);
+  background: var(--bg-surface-subtle);
 }
 
 .audit-table td {
@@ -209,7 +221,7 @@
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  background: #E8F5EE;
+  background: var(--status-verified-bg);
   color: var(--color-forest-green);
   font-size: 0.75rem;
   font-weight: 600;

@@ -43,6 +43,12 @@
   box-shadow: var(--shadow-sm);
   display: flex;
   flex-direction: column;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.kpi-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
 }
 
 .kpi-card__top {
@@ -70,8 +76,9 @@
 
 .kpi-tag {
   font-size: 0.7rem;
-  background: var(--color-light-neutral);
-  color: var(--color-deep-green);
+  background: var(--bg-surface-subtle);
+  border: 1px solid var(--border-subtle);
+  color: var(--color-forest-green);
   padding: 2px 8px;
   border-radius: var(--radius-full);
   font-weight: 600;
@@ -133,7 +140,8 @@
 .panel-count {
   font-size: 0.75rem;
   color: var(--text-muted);
-  background: var(--color-slate-100);
+  background: var(--bg-surface-subtle);
+  border: 1px solid var(--border-subtle);
   padding: 3px 8px;
   border-radius: var(--radius-full);
 }
@@ -154,7 +162,7 @@
   font: var(--font-small-bold);
   color: var(--text-secondary);
   border-bottom: 1px solid var(--border-medium);
-  background: var(--color-slate-50);
+  background: var(--bg-surface-subtle);
 }
 
 .portfolio-table td {
@@ -188,7 +196,8 @@
 
 .registry-chip {
   font-size: 0.75rem;
-  background: var(--color-slate-100);
+  background: var(--bg-surface-subtle);
+  border: 1px solid var(--border-subtle);
   padding: 3px 8px;
   border-radius: var(--radius-xs);
   color: var(--text-secondary);
@@ -202,13 +211,13 @@
 }
 
 .holding-badge--active {
-  background: #E8F5EE;
-  color: #14532D;
+  background: var(--status-verified-bg);
+  color: var(--status-verified-text);
 }
 
 .holding-badge--partially-retired {
-  background: #FEF3C7;
-  color: #92400E;
+  background: var(--status-under-review-bg);
+  color: var(--status-under-review-text);
 }
 
 .text-right {
@@ -255,6 +264,12 @@
   box-shadow: var(--shadow-sm);
   display: flex;
   flex-direction: column;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.cert-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
 }
 
 .cert-card__top {
@@ -271,7 +286,7 @@
   font-size: 0.75rem;
   font-weight: 600;
   color: var(--color-forest-green);
-  background: #E8F5EE;
+  background: var(--status-verified-bg);
   padding: 4px 10px;
   border-radius: var(--radius-full);
 }
@@ -294,162 +309,81 @@
 }
 
 .cert-stats {
-  background: var(--color-light-neutral);
+  background: var(--bg-surface-subtle);
+  border: 1px solid var(--border-subtle);
   padding: var(--space-3) var(--space-4);
   border-radius: var(--radius-md);
   display: flex;
-  flex-direction: column;
-  gap: var(--space-2);
+  justify-content: space-between;
   margin-bottom: var(--space-4);
 }
 
-.cert-stat-block {
+.cert-stat-item {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
 }
 
-.stat-label {
-  font-size: 0.72rem;
+.cert-stat-label {
+  font-size: 0.7rem;
   color: var(--text-muted);
   text-transform: uppercase;
 }
 
-.stat-num {
+.cert-stat-val {
   font: var(--font-small-bold);
+  color: var(--text-primary);
+}
+
+.cert-stat-val.green {
   color: var(--color-forest-green);
 }
 
-.stat-serial {
-  font-family: var(--font-family-mono);
-  font-size: 0.72rem;
-  color: var(--text-secondary);
-}
-
 .cert-actions {
+  display: flex;
+  gap: var(--space-2);
   margin-top: auto;
 }
 
-.cert-btn {
+.cert-actions .w-full {
   width: 100%;
 }
 
-/* Modal Content */
-.retire-modal-content {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-4);
-}
-
-.retire-warning-banner {
-  display: flex;
-  gap: var(--space-3);
-  background: #FEF3C7;
-  border: 1px solid #F59E0B;
-  border-radius: var(--radius-md);
-  padding: var(--space-3) var(--space-4);
-}
-
-.warning-icon {
-  color: #B45309;
-  flex-shrink: 0;
-  margin-top: 2px;
-}
-
-.retire-warning-banner strong {
-  font: var(--font-small-bold);
-  color: #92400E;
-  display: block;
-}
-
-.retire-warning-banner p {
-  font-size: 0.75rem;
-  color: #78350F;
-  margin: 0;
-}
-
-.retire-project-summary {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: var(--space-3) var(--space-4);
-  background: var(--color-slate-50);
-  border-radius: var(--radius-md);
+/* Modal form elements */
+.retire-holding-info {
+  background: var(--bg-surface-subtle);
   border: 1px solid var(--border-subtle);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-4);
 }
 
-.retire-tag {
-  font-size: 0.72rem;
-  color: var(--text-muted);
+.retire-field-group {
+  margin-bottom: var(--space-4);
 }
 
-.retire-title {
-  font: var(--font-card-heading);
-  color: var(--text-primary);
-  margin-top: 2px;
-}
-
-.retire-balance {
-  text-align: right;
-}
-
-.balance-label {
-  font-size: 0.7rem;
-  color: var(--text-muted);
+.retire-field-label {
   display: block;
-}
-
-.modal-field {
-  display: flex;
-  flex-direction: column;
-}
-
-.modal-label {
   font: var(--font-small-bold);
   color: var(--text-secondary);
-  margin-bottom: var(--space-2);
+  margin-bottom: var(--space-1);
 }
 
-.modal-input {
+.retire-text-input {
   width: 100%;
-  padding: 10px 12px;
-  background: var(--bg-surface);
+  padding: 8px 12px;
+  background: var(--bg-surface-subtle);
   border: 1px solid var(--border-medium);
   border-radius: var(--radius-sm);
-  font: var(--font-body);
   color: var(--text-primary);
   outline: none;
 }
 
-.modal-input:focus {
+.retire-text-input:focus {
   border-color: var(--color-forest-green);
   box-shadow: var(--focus-ring);
+  background: var(--bg-surface);
 }
 
-.modal-hint {
-  font-size: 0.72rem;
-  color: var(--text-muted);
-  margin-top: 4px;
-}
-
-.modal-error {
-  background: #FEE2E2;
-  color: #991B1B;
-  padding: var(--space-3);
-  border-radius: var(--radius-sm);
-  font-size: 0.8rem;
-}
-
-.modal-actions {
-  display: flex;
-  justify-content: flex-end;
-  gap: var(--space-3);
-  margin-top: var(--space-3);
-  padding-top: var(--space-4);
-  border-top: 1px solid var(--border-subtle);
-}
-
-/* Responsive */
 @media (max-width: 960px) {
   .portfolio-layout {
     grid-template-columns: 1fr;

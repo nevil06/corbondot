@@ -1,20 +1,20 @@
 /* ==========================================================================
    CARBONLY DESIGN SYSTEM TOKENS
-   Strict palette & semantic variables as mandated by the Master Brief.
-   Palette variables are strictly defined here; components consume semantic tokens.
+   Groww-inspired Minimalist Fintech × Climate-Tech Palette
+   Supports Light & Dark Modes with softened contrast & floating shadows.
    ========================================================================== */
 
 :root {
-  /* Core Brand & Neutral Palette (Source of Truth) */
+  /* Core Brand Palette (Source of Truth) */
   --color-deep-green: #16342B;
   --color-forest-green: #2D6A4F;
   --color-accent-green: #40916C;
-  --color-dark-blue: #1B3A57;
+  --color-dark-blue: #1A362D; /* Refined from stark blue to deep forest charcoal */
   --color-white: #FFFFFF;
-  --color-light-neutral: #EEF2ED;
-  --color-light-blue-grey: #E9EEF3;
+  --color-light-neutral: #F4F6F4;
+  --color-light-blue-grey: #EEF2F0;
 
-  /* Extended Utility Swatches (Muted, Enterprise Tones) */
+  /* Extended Utility Swatches */
   --color-slate-50: #F8FAFC;
   --color-slate-100: #F1F5F9;
   --color-slate-200: #E2E8F0;
@@ -36,34 +36,33 @@
   --color-red-600: #DC2626;
   --color-red-700: #B91C1C;
 
-  /* Semantic Layout Backgrounds */
-  /* Restrained Green Rule: Backgrounds stay white/light neutral; app never feels green overall */
-  --bg-app: var(--color-light-neutral);
-  --bg-surface: var(--color-white);
-  --bg-surface-subtle: #F7FAF8;
-  --bg-elevated: var(--color-white);
-  --bg-muted: #E2EAE5;
-  --bg-card: var(--color-white);
+  /* Semantic Layout Backgrounds (Light Mode) */
+  --bg-app: #F5F7F5;
+  --bg-surface: #FFFFFF;
+  --bg-surface-subtle: #F9FAF9;
+  --bg-elevated: #FFFFFF;
+  --bg-muted: #E8ECE9;
+  --bg-card: #FFFFFF;
 
-  /* Semantic Typography Colors (WCAG AA Compliant) */
+  /* Semantic Typography Colors (Light Mode) */
   --text-primary: #12211C;
-  --text-secondary: #3D4F48;
-  --text-muted: #6B7C75;
-  --text-on-dark: var(--color-white);
-  --text-inverse: var(--color-white);
+  --text-secondary: #475569;
+  --text-muted: #64748B;
+  --text-on-dark: #FFFFFF;
+  --text-inverse: #FFFFFF;
 
   /* Semantic Borders */
-  --border-subtle: #E2E8E4;
-  --border-medium: #CAD5CE;
+  --border-subtle: rgba(18, 38, 30, 0.08);
+  --border-medium: rgba(18, 38, 30, 0.16);
   --border-focus: var(--color-forest-green);
 
   /* Primary Interactive / CTA Tokens */
   --cta-primary-bg: var(--color-forest-green);
-  --cta-primary-text: var(--color-white);
+  --cta-primary-text: #FFFFFF;
   --cta-primary-hover: var(--color-deep-green);
   --cta-primary-active: #0F251E;
 
-  /* Status Pill Colors (Label + Dot, Accessible Contrast) */
+  /* Status Pill Colors (Label + Dot) */
   --status-pending-text: #475569;
   --status-pending-bg: #F1F5F9;
   --status-pending-dot: #64748B;
@@ -76,7 +75,7 @@
   --status-verified-bg: #E8F5EE;
   --status-verified-dot: var(--color-forest-green);
 
-  --status-listed-text: #164E63;
+  --status-listed-text: #0E7490;
   --status-listed-bg: #E0F2FE;
   --status-listed-dot: #0284C7;
 
@@ -96,7 +95,15 @@
   --status-draft-bg: #F3F4F6;
   --status-draft-dot: #9CA3AF;
 
-  /* Typography Scale */
+  --status-responded-text: #1D4ED8;
+  --status-responded-bg: #EFF6FF;
+  --status-responded-dot: #3B82F6;
+
+  --status-accepted-text: #166534;
+  --status-accepted-bg: #DCFCE7;
+  --status-accepted-dot: #16A34A;
+
+  /* Typography Scale (Inter Font) */
   --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   --font-family-mono: 'SF Mono', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
 
@@ -110,7 +117,7 @@
   --font-numeric-lg: 700 2rem / 1.15 var(--font-family);          /* 32px Bold Numeric */
   --font-numeric-md: 700 1.5rem / 1.2 var(--font-family);         /* 24px Bold Numeric */
 
-  /* Spacing Scale (4px base) */
+  /* Spacing Scale */
   --space-1: 4px;
   --space-2: 8px;
   --space-3: 12px;
@@ -122,33 +129,129 @@
   --space-12: 48px;
   --space-16: 64px;
 
-  /* Radii */
+  /* Squircles (Smooth Rounded Corners) */
   --radius-xs: 4px;
-  --radius-sm: 6px;
-  --radius-md: 10px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
   --radius-lg: 16px;
-  --radius-xl: 20px;
+  --radius-xl: 22px;
   --radius-full: 9999px;
 
-  /* Shadows (Fintech / Groww-inspired restrained shadows) */
-  --shadow-xs: 0 1px 2px rgba(18, 38, 30, 0.04);
-  --shadow-sm: 0 1px 3px rgba(18, 38, 30, 0.06), 0 1px 2px rgba(18, 38, 30, 0.04);
-  --shadow-md: 0 4px 14px rgba(18, 38, 30, 0.07);
-  --shadow-lg: 0 10px 28px rgba(18, 38, 30, 0.09);
-  --shadow-modal: 0 20px 40px rgba(18, 38, 30, 0.16);
+  /* Floating Shadows for Light Mode (Enhanced Depth) */
+  --shadow-xs: 0 1px 3px rgba(18, 38, 30, 0.04);
+  --shadow-sm: 0 2px 8px -1px rgba(18, 38, 30, 0.08), 0 1px 3px rgba(18, 38, 30, 0.04);
+  --shadow-md: 0 8px 22px -3px rgba(18, 38, 30, 0.1), 0 3px 8px -2px rgba(18, 38, 30, 0.05);
+  --shadow-lg: 0 14px 34px -4px rgba(18, 38, 30, 0.12), 0 4px 12px -2px rgba(18, 38, 30, 0.06);
+  --shadow-hover: 0 16px 36px -4px rgba(18, 38, 30, 0.14), 0 6px 16px -2px rgba(45, 106, 79, 0.12);
+  --shadow-floating: 0 12px 32px -4px rgba(18, 38, 30, 0.12), 0 4px 12px rgba(18, 38, 30, 0.06);
+  --shadow-modal: 0 24px 48px -4px rgba(18, 38, 30, 0.22);
 
   /* Accessibility & Focus */
   --focus-ring: 0 0 0 3px rgba(45, 106, 79, 0.28);
   --focus-ring-offset: 2px;
   --focus-outline: 2px solid var(--color-forest-green);
 
-  /* Motion & Transitions */
-  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-normal: 220ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 220ms cubic-bezier(0.16, 1, 0.3, 1);
   --transition-smooth: 320ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Reduced Motion Override for Accessibility */
+/* ==========================================================================
+   GROWW-INSPIRED DARK MODE [data-theme="dark"]
+   Refined Slate Text (No harsh glare), Cute Emerald Accents & Floating Cards
+   ========================================================================== */
+
+[data-theme="dark"] {
+  /* Rich Dark Carbon Canvas */
+  --bg-app: #0B120E;
+  --bg-surface: #121C17;
+  --bg-surface-subtle: #17241E;
+  --bg-elevated: #1C2B24;
+  --bg-muted: #22352C;
+  --bg-card: #121C17;
+
+  /* Softened Legible Typography (Zero Eye Strain) */
+  --text-primary: #E2E8F0;    /* Soft Crisp Slate White */
+  --text-secondary: #94A3B8;  /* Muted Slate */
+  --text-muted: #64748B;      /* Gentle Hint Text */
+  --text-on-dark: #FFFFFF;
+  --text-inverse: #0B120E;
+
+  /* Subtle Crisp Dark Borders */
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-medium: rgba(255, 255, 255, 0.14);
+  --border-focus: #4ADE80;
+
+  /* Color Adaptations for Dark Mode */
+  --color-white: #121C17;
+  --color-slate-50: #17241E;
+  --color-slate-100: #1B2923;
+  --color-slate-200: #22352C;
+  --color-light-neutral: #17241E;
+  --color-light-blue-grey: #17252F;
+  --color-deep-green: #4ADE80;
+  --color-dark-blue: #A7F3D0; /* Soft emerald for headings on dark */
+
+  /* Vibrant Emerald CTAs */
+  --cta-primary-bg: #2D6A4F;
+  --cta-primary-text: #FFFFFF;
+  --cta-primary-hover: #3FA372;
+  --cta-primary-active: #204C38;
+
+  /* Status Pills */
+  --status-pending-text: #CBD5E1;
+  --status-pending-bg: rgba(148, 163, 184, 0.14);
+  --status-pending-dot: #94A3B8;
+
+  --status-under-review-text: #FDE68A;
+  --status-under-review-bg: rgba(245, 158, 11, 0.16);
+  --status-under-review-dot: #F59E0B;
+
+  --status-verified-text: #86EFAC;
+  --status-verified-bg: rgba(34, 197, 94, 0.16);
+  --status-verified-dot: #4ADE80;
+
+  --status-listed-text: #7DD3FC;
+  --status-listed-bg: rgba(14, 165, 233, 0.16);
+  --status-listed-dot: #38BDF8;
+
+  --status-sold-text: #94A3B8;
+  --status-sold-bg: rgba(100, 116, 139, 0.2);
+  --status-sold-dot: #64748B;
+
+  --status-retired-text: #86EFAC;
+  --status-retired-bg: rgba(34, 197, 94, 0.16);
+  --status-retired-dot: #4ADE80;
+
+  --status-rejected-text: #FCA5A5;
+  --status-rejected-bg: rgba(239, 68, 68, 0.18);
+  --status-rejected-dot: #F87171;
+
+  --status-draft-text: #D1D5DB;
+  --status-draft-bg: rgba(156, 163, 175, 0.16);
+  --status-draft-dot: #9CA3AF;
+
+  --status-responded-text: #93C5FD;
+  --status-responded-bg: rgba(59, 130, 246, 0.16);
+  --status-responded-dot: #60A5FA;
+
+  --status-accepted-text: #86EFAC;
+  --status-accepted-bg: rgba(34, 197, 94, 0.16);
+  --status-accepted-dot: #4ADE80;
+
+  /* Shadows (Dark Mode Floating) */
+  --shadow-xs: 0 1px 3px rgba(0, 0, 0, 0.4);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.5), 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 14px 36px rgba(0, 0, 0, 0.7);
+  --shadow-hover: 0 16px 40px -4px rgba(0, 0, 0, 0.8), 0 4px 16px -2px rgba(74, 222, 128, 0.2);
+  --shadow-floating: 0 12px 36px rgba(0, 0, 0, 0.65);
+  --shadow-modal: 0 24px 56px rgba(0, 0, 0, 0.85);
+
+  --focus-ring: 0 0 0 3px rgba(74, 222, 128, 0.35);
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, ::before, ::after {
     animation-duration: 0.01ms !important;

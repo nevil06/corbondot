@@ -1,5 +1,7 @@
 import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
+import { useRole } from '../context/RoleContext';
+import { ShieldCheck, Lock } from 'lucide-react';
 
 // Showcase
 import { DesignSystemScreen } from '../screens/DesignSystem/DesignSystem';
@@ -28,6 +30,68 @@ import { SellerVerificationScreen } from '../screens/admin/SellerVerificationScr
 import { ListingApprovalScreen } from '../screens/admin/ListingApprovalScreen';
 import { UsersTransactionsScreen } from '../screens/admin/UsersTransactionsScreen';
 
+// Admin Security Gate Guard
+const AdminRoute: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const { isAdminAuthenticated, openAdminAuthModal } = useRole();
+
+  if (!isAdminAuthenticated) {
+    return (
+      <div style={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        minHeight: '480px',
+        textAlign: 'center',
+        padding: '32px'
+      }}>
+        <div style={{
+          width: '64px',
+          height: '64px',
+          borderRadius: '16px',
+          backgroundColor: 'rgba(45, 106, 79, 0.12)',
+          color: 'var(--color-forest-green)',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          marginBottom: '16px'
+        }}>
+          <ShieldCheck size={36} />
+        </div>
+        <h2 style={{ margin: '0 0 8px 0', fontSize: '1.75rem', fontWeight: 700, color: 'var(--text-primary)' }}>
+          Admin Authority Gate
+        </h2>
+        <p style={{ margin: '0 0 24px 0', maxWidth: '420px', color: 'var(--text-muted)', fontSize: '0.9375rem', lineHeight: 1.5 }}>
+          This portal is restricted to compliance auditors and registry authorities. Please enter the authority password to proceed.
+        </p>
+        <button
+          type="button"
+          onClick={openAdminAuthModal}
+          style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '8px',
+            padding: '12px 24px',
+            borderRadius: '10px',
+            backgroundColor: 'var(--color-forest-green)',
+            color: '#FFFFFF',
+            border: 'none',
+            fontSize: '0.9375rem',
+            fontWeight: 600,
+            cursor: 'pointer',
+            boxShadow: '0 4px 14px rgba(45, 106, 79, 0.28)'
+          }}
+        >
+          <Lock size={16} />
+          <span>Unlock with Passcode (admin123)</span>
+        </button>
+      </div>
+    );
+  }
+
+  return <>{children}</>;
+};
+
 export const AppRoutes: React.FC = () => {
   return (
     <Routes>
@@ -55,11 +119,11 @@ export const AppRoutes: React.FC = () => {
       <Route path="/seller/inventory" element={<InventoryScreen />} />
       <Route path="/seller/inquiries" element={<InquiriesScreen />} />
 
-      {/* Admin Governance Routes (4 Screens) */}
-      <Route path="/admin/dashboard" element={<AdminDashboard />} />
-      <Route path="/admin/verification" element={<SellerVerificationScreen />} />
-      <Route path="/admin/listings" element={<ListingApprovalScreen />} />
-      <Route path="/admin/users-transactions" element={<UsersTransactionsScreen />} />
+      {/* Admin Governance Routes (4 Screens Protected by admin123 Gate) */}
+      <Route path="/admin/dashboard" element={<AdminRoute><AdminDashboard /></AdminRoute>} />
+      <Route path="/admin/verification" element={<AdminRoute><SellerVerificationScreen /></AdminRoute>} />
+      <Route path="/admin/listings" element={<AdminRoute><ListingApprovalScreen /></AdminRoute>} />
+      <Route path="/admin/users-transactions" element={<AdminRoute><UsersTransactionsScreen /></AdminRoute>} />
 
       {/* Catch-all */}
       <Route path="*" element={<Navigate to="/" replace />} />

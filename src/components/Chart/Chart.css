@@ -46,11 +46,15 @@
 }
 
 .chart-point {
-  fill: var(--color-white);
+  fill: var(--bg-surface);
   stroke: var(--color-forest-green);
   stroke-width: 2.5;
   transition: r var(--transition-fast), fill var(--transition-fast);
   cursor: pointer;
+}
+
+[data-theme="dark"] .chart-point {
+  stroke: #4ADE80;
 }
 
 .chart-point:hover {
@@ -94,7 +98,8 @@
   height: calc(100% - 20px);
   display: flex;
   align-items: flex-end;
-  background: var(--color-light-neutral);
+  background: var(--bg-surface-subtle);
+  border: 1px solid var(--border-subtle);
   border-radius: var(--radius-xs) var(--radius-xs) 0 0;
   overflow: hidden;
 }
@@ -104,6 +109,10 @@
   background: var(--color-forest-green);
   border-radius: var(--radius-xs) var(--radius-xs) 0 0;
   transition: height var(--transition-normal);
+}
+
+[data-theme="dark"] .bar-fill {
+  background: #2D6A4F;
 }
 
 .bar-fill:hover {
@@ -133,7 +142,7 @@
 
 .donut-ring-bg {
   fill: transparent;
-  stroke: var(--color-light-neutral);
+  stroke: var(--bg-surface-subtle);
   stroke-width: 4;
 }
 

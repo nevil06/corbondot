@@ -39,10 +39,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  box-shadow: var(--shadow-sm);
 }
 
 .empty-icon {
-  color: var(--text-muted);
+  color: var(--color-forest-green);
   margin-bottom: var(--space-4);
 }
 
@@ -71,14 +72,17 @@
 
 .compare-table {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0;
   min-width: 780px;
 }
 
+/* Side Metric Column Header */
 .compare-metric-col {
   width: 240px;
-  background: var(--color-slate-50);
+  background: var(--bg-surface-subtle);
   border-right: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
   padding: var(--space-5);
   text-align: left;
   font: var(--font-small-bold);
@@ -88,11 +92,13 @@
   z-index: 2;
 }
 
+/* Separate Project Column Headers (Distinct Cards) */
 .compare-project-col {
-  min-width: 260px;
+  min-width: 270px;
   max-width: 320px;
-  padding: var(--space-5);
+  padding: 16px;
   border-right: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
   text-align: left;
   vertical-align: top;
   background: var(--bg-surface);
@@ -102,37 +108,56 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  background: var(--bg-surface-subtle);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-lg);
+  padding: 18px;
+  box-shadow: var(--shadow-xs);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal);
+}
+
+.compare-col-header:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--color-forest-green);
 }
 
 .remove-compare-btn {
   position: absolute;
-  top: 0;
-  right: 0;
-  background: transparent;
-  border: none;
+  top: 10px;
+  right: 10px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
   color: var(--text-muted);
   cursor: pointer;
-  padding: 4px;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: var(--radius-xs);
   transition: all var(--transition-fast);
 }
 
 .remove-compare-btn:hover {
-  background: var(--color-red-50);
+  background: var(--status-rejected-bg);
   color: var(--color-red-600);
+  border-color: rgba(220, 38, 38, 0.3);
 }
 
 .compare-col-tag {
   font-size: 0.72rem;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--color-forest-green);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
   margin-bottom: var(--space-1);
 }
 
 .compare-col-title {
   font: var(--font-card-heading);
   color: var(--text-primary);
-  margin-bottom: var(--space-2);
+  margin: 0 0 var(--space-2) 0;
   line-height: 1.35;
   height: 2.7em;
   display: -webkit-box;
@@ -157,21 +182,23 @@
   width: 100%;
 }
 
-/* Rows */
+/* Rows & Hover States (No disappearing letters) */
 .compare-table tbody tr {
   border-top: 1px solid var(--border-subtle);
+  transition: background-color var(--transition-fast);
 }
 
 .compare-table tbody tr:hover {
-  background: var(--color-slate-50);
+  background-color: var(--bg-surface-subtle);
 }
 
 .row-header {
   padding: var(--space-3) var(--space-5);
   font: var(--font-small-bold);
   color: var(--text-secondary);
-  background: var(--color-slate-50);
+  background: var(--bg-surface-subtle);
   border-right: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
   position: sticky;
   left: 0;
   z-index: 1;
@@ -182,6 +209,7 @@
   font: var(--font-body);
   color: var(--text-primary);
   border-right: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
   vertical-align: middle;
 }
 
@@ -192,6 +220,7 @@
 
 .numeric-td {
   font-weight: 600;
+  color: var(--text-primary);
 }
 
 .methodology-td {
@@ -199,6 +228,7 @@
   align-items: center;
   gap: 6px;
   font-size: 0.85rem;
+  color: var(--text-primary);
 }
 
 .methodology-icon {
@@ -220,8 +250,9 @@
 .sdg-mini-chip {
   font-size: 0.7rem;
   font-weight: 600;
-  background: var(--color-light-neutral);
+  background: var(--bg-surface-subtle);
+  border: 1px solid var(--border-subtle);
   padding: 2px 6px;
   border-radius: var(--radius-xs);
-  color: var(--color-deep-green);
+  color: var(--color-forest-green);
 }

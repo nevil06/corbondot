@@ -33,7 +33,7 @@
 
 /* Certificate Paper Layout */
 .certificate-paper {
-  background: var(--color-white);
+  background: var(--bg-surface);
   border: 1px solid var(--border-medium);
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow-lg);
@@ -41,7 +41,7 @@
   margin: 0 auto;
   padding: var(--space-6);
   position: relative;
-  background-image: radial-gradient(rgba(45, 106, 79, 0.03) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(45, 106, 79, 0.05) 1px, transparent 1px);
   background-size: 24px 24px;
 }
 

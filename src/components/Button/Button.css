@@ -16,6 +16,15 @@
   user-select: none;
 }
 
+.carbon-btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.carbon-btn:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
 .carbon-btn:focus-visible {
   outline: none;
   box-shadow: var(--focus-ring);
@@ -56,21 +65,22 @@
 
 /* 1. Primary */
 .carbon-btn--primary {
-  background-color: var(--color-forest-green);
-  color: var(--color-white);
-  border-color: var(--color-forest-green);
+  background-color: var(--cta-primary-bg);
+  color: var(--cta-primary-text);
+  border-color: var(--cta-primary-bg);
 }
 .carbon-btn--primary:hover:not(:disabled) {
-  background-color: var(--color-deep-green);
-  border-color: var(--color-deep-green);
+  background-color: var(--cta-primary-hover);
+  border-color: var(--cta-primary-hover);
+  box-shadow: 0 4px 14px rgba(45, 106, 79, 0.28);
 }
 .carbon-btn--primary:active:not(:disabled) {
-  background-color: #0E241E;
+  background-color: var(--cta-primary-active);
 }
 
 /* 2. Secondary */
 .carbon-btn--secondary {
-  background-color: var(--color-light-neutral);
+  background-color: var(--bg-surface-subtle);
   color: var(--text-primary);
   border-color: var(--border-subtle);
 }
@@ -79,7 +89,7 @@
   border-color: var(--border-medium);
 }
 .carbon-btn--secondary:active:not(:disabled) {
-  background-color: #D6E2DB;
+  background-color: var(--bg-surface);
 }
 
 /* 3. Outline */
@@ -89,10 +99,11 @@
   border-color: var(--color-forest-green);
 }
 .carbon-btn--outline:hover:not(:disabled) {
-  background-color: rgba(45, 106, 79, 0.08);
+  background-color: rgba(45, 106, 79, 0.1);
+  border-color: var(--color-accent-green);
 }
 .carbon-btn--outline:active:not(:disabled) {
-  background-color: rgba(45, 106, 79, 0.16);
+  background-color: rgba(45, 106, 79, 0.18);
 }
 
 /* 4. Ghost */
@@ -102,11 +113,11 @@
   border-color: transparent;
 }
 .carbon-btn--ghost:hover:not(:disabled) {
-  background-color: rgba(22, 52, 43, 0.06);
+  background-color: rgba(45, 106, 79, 0.08);
   color: var(--text-primary);
 }
 .carbon-btn--ghost:active:not(:disabled) {
-  background-color: rgba(22, 52, 43, 0.12);
+  background-color: rgba(45, 106, 79, 0.14);
 }
 
 /* 5. Danger */
